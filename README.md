@@ -12,7 +12,7 @@ This is an employee/student check-in app which starts the process by taking thei
 		○ If you do not have a Power Apps license, sign up for the Power Apps Community Plan
 		○ If you do not have an environment, create one through the Power Platform Admin Center
 	2. From the Solutions screen, select "Import" in the Command Bar
-	3. Within the Import Solution dialog, select "Choose File" and select the "WorkerCheckinTools_1_0_0_2_managed" file downloaded previously
+	3. Within the Import Solution dialog, select "Choose File" and select the "WorkerCheckinTools_1_0_0_3_managed" file downloaded previously
 	4. Proceed through the dialog window with defaults selected and initiate the solution import process
 	5. When complete, there may be warnings noted, but this is ok as long as the Solution has been installed
 
@@ -54,9 +54,17 @@ This is an employee/student check-in app which starts the process by taking thei
 		d. After a few seconds, refresh to find two sample Language Profiles present in the "Active Worker Check In Language Profiles" view
 
 ## Configure Data-dependent Processes
-	1. Open the Worker Check-In Tools solution
-	2. At the right side of the Command Bar, select Process in the drop-down menu to filter the list
-	3. Open the "Worker Check-in App - Create Localized Label for Default Language" Workflow
+	1. From the Solutions screen, click the "New Solution" button at the left side of the Command Bar
+	2. In the New Solution pane which pulls out from the right, enter the following values:
+		a. Display Name: Worker Check-In Tools Customizations
+		b. Name: [auto-populated]
+		c. Publisher: [your preferred publisher]
+		d. Version: [Leave as default]
+	3. Click "Create" to create and open the new solution
+	4. From the Worker Check-In Tools Customizations solution, click "Add Existing" in the Command Bar and select "Process" from the drop-down list and do the following:
+		a. Find and select the Process named "Worker Check-in App - Create Localized Label for Default Language"
+		b. Click "add" at the bottom left of the pull-out pane
+	5. Open the "Worker Check-in App - Create Localized Label for Default Language" Workflow
 		a. From the Process Information form, Click "Deactivate" in the ribbon to edit the process
 		b. At the bottom of the form, click "Set Properties" for the single step labeled "Create English Localized Label"
 		c. In the Step Properties window, clear any value present for "Language" and set to the "English" record previously imported
