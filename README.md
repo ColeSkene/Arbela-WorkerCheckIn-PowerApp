@@ -73,18 +73,21 @@ This is an employee/student check-in app which starts the process by taking thei
 		f. Close the window to return to the Maker Portal
 
 ## Import Sample Data (Part 2)
-	1. Click "Questions" under the Configuration section of the site map on the left side of the screen
+	1. Open the Worker Check-In Tools solution
+	2. At the right side of the Command Bar, select Model-driven App in the drop-down menu to filter the list
+	3. Select the "Worker Check-In Management App" component to open the App Designer, and click "Play" to run the Model-driven App
+	4. From the Worker Check-In Management App, click "Questions" under the Configuration section of the site map on the left side of the screen
 		a. Click "Import from Excel"
 		b. Click "Choose File" then navigate to and select the "Questions (Sample).xlsx" downloaded previously
 		c. Proceed through the wizard and select "Finish Import" to initiate the import
 		d. After a few seconds, refresh to find seven sample Questions present in the "Active Worker Check In Questions" view
-	2. Click "Localized Labels" under the Reference section of the site map on the left side of the screen
+	5. Click "Localized Labels" under the Reference section of the site map on the left side of the screen
 		a. Note the seven English Localized Labels corresponding to the Questions previously imported
 		b. Click "Import from Excel"
 		c. Click "Choose File" then navigate to and select the "Localized Labels (Sample).xlsx" downloaded previously
 		d. Proceed through the wizard and select "Finish Import" to initiate the import
 		e. After a few seconds, refresh to find seven new Spanish sample Language Profiles present in the "Active Worker Check In Question Localized Labels" view
-	3. Click "Locations" under the Configuration section of the site map on the left side of the screen
+	6. Click "Locations" under the Configuration section of the site map on the left side of the screen
 		a. Click "New"
 		b. Enter a Location name ("Default Location" may suffice for now)
 		c. Select "English" as the Default Language
@@ -95,13 +98,12 @@ This is an employee/student check-in app which starts the process by taking thei
 		h. From the pull-out menu on the right, click "Enter" on your Keyboard to browse all records
 		i. Select all records one by one, and once the list is empty, click "Add" at the bottom of the pull-out menu
 		j. Click "Save & Close"
-	4. Click "Settings Profiles" under the Configuration section of the site map on the left side of the screen
+	7. Click "Settings Profiles" under the Configuration section of the site map on the left side of the screen
 		a. Click "New"
 		b. Enter a Settings Profile name ("Default Profile" or "My Profile" may suffice for now)
 		c. Select "Default Location" as the Default Location
 		d. Enter "0" as your default camera number
 		e. Click "Save & Close" to create the record
-
 
 ## Test the Check-in App Configuration Settings
 	• From the Worker Check-In Management App, click "Check-in App" under the Links section of the site map on the left side of the screen
@@ -117,6 +119,7 @@ This is an employee/student check-in app which starts the process by taking thei
 		○ Select "Session Details" note the values for User Settings, Location, and Language Profile to confirm they are set as expected
 			§ Click the Home Icon at the top left of the screen to return to the Home Screen
 		○ Select "Questionnaire" to reveal the Welcome Screen for the Worker Check-In Experience
+	• Note that the HomeScreen is visible to all users of the app by default, as the app is designed to be run by a single device-licensed user per kiosk/location. For scenarios where the app will be run by each individual worker on their own device (and with their own account) the app can be modified to hide this home screen after initial configuration
 
 ## Test the Check-in App Questionnaire
 	• Welcome Screen
@@ -128,7 +131,7 @@ This is an employee/student check-in app which starts the process by taking thei
 			§ Submit Button
 			§ Cancel Button
 		○ Enter "Test" as an Employee Id and click "Submit"
-		○ Note that while not in Manual Entry Mode the system awaits Keyboard input (from an RFID scanner or otherwise) and will continue automatically when input is detected
+		○ Note that while not in Manual Entry Mode the system awaits Keyboard input (from an RFID scanner or otherwise) and will continue automatically when input is detected, and will accept any value. This can be modified to employ specific validation logic before allowing the user to proceed to the next screen.
 	• Language Screen
 		○ Note that the Select Language screen shows each Language Profile imported previously and identifies each by the record's "Display Name" attribute
 		○ Select "English" to continue
@@ -139,6 +142,7 @@ This is an employee/student check-in app which starts the process by taking thei
 	• Selfie Screen
 		○ Note that the Camera screen will automatically capture an image after a 5 second countdown and options will be presented to "Continue" or "Retake"
 	• Questionnaire Screen
+		○ Note that after 20 seconds of inactivity, the Questionnaire will begin to "Timeout" with a 10 second countdown timer with Yes/No options to Quit/Abandon the questionnaire
 		○ Note that the Questionnaire Screen contains the following elements w/ text corresponding to the selected default Language Profile:
 			§ Header Text
 			§ Yes Button
@@ -146,7 +150,7 @@ This is an employee/student check-in app which starts the process by taking thei
 		○ Note that the Questions displayed are associated with the Default Location as specified in the current Settings Profile record
 		○ Note that, for each Question Displayed, the text shown is that of the associated Localized Label related to the Language Profile selected previously
 		○ Note that after the first question is answered, a back button will appear in the upper left corner of the screen for all subsequent questions, allowing users to go back and change their answer for previous questions
-		○ Note that after 20 seconds of inactivity, the Questionnaire will begin to "Timeout" with a 10 second countdown timer with Yes/No options to Quit/Abandon the questionnaire
+
 	• Disposition Screen
 		○ Note that after answering all questions with values corresponding to the Question's "Expected Response" attribute, this screen will display the Language Profile's "Label: Disposition Message (Pass)" value with a corresponding smiley face icon
 			§ Otherwise, the Language Profile's "Label: Disposition Message (Fail)" value will be displayed with an "X" Icon
