@@ -2,7 +2,7 @@
 This is an employee/student check-in app which starts the process by taking their picture and verifying that they don’t have any COVID symptoms (by asking simple Yes/No questions) before letting them into the building.
 
 # Functional Demonstration
-[![Functional Demonstration Video Link](https://img.youtube.com/vi/g0Pr5_NnegM/0.jpg)](https://www.youtube.com/watch?v=g0Pr5_NnegM)
+[![Functional Demonstration Video Link](https://img.youtube.com/vi/LRtbdqHZwYQ/0.jpg)](https://www.youtube.com/watch?v=LRtbdqHZwYQ)
 
 # Installation Instructions
 
